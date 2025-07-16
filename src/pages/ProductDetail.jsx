@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Calendar from 'react-calendar';
-import productList from '../data/products.json';
 import WishBtn from '../components/WishBtn';
 import Section1 from '../components/ProductDetailSections/Section1';
 import Section2 from '../components/ProductDetailSections/Section2';
@@ -9,11 +8,12 @@ import Section3 from '../components/ProductDetailSections/Section3';
 import Section4 from '../components/ProductDetailSections/Section4';
 import 'react-calendar/dist/Calendar.css';
 import '../assets/css/productDetail.css';
-import '../assets/css/productSection.css'
+import '../assets/css/productSection.css';
 
 const ProductDetail = () => {
   const { id } = useParams();
-  const product = productList.find((item) => item.id === parseInt(id));
+  const [productList, setProductList] = useState([]);
+  const [product, setProduct] = useState(null);
   const [count, setCount] = useState(1);
   const [selectedDate, setSelectedDate] = useState(null);
   const [showCalendar, setShowCalendar] = useState(false);
@@ -32,16 +32,18 @@ const ProductDetail = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const scrollToSection = (id) => {
-    const section = sectionRefs[id]?.current;
-    if (section) {
-      const headerHeight = 80; // ✅ 헤더 높이
-      const tabHeight = 66;    // ✅ 탭 높이
-      const scrollY = section.getBoundingClientRect().top + window.pageYOffset - headerHeight - tabHeight;
-      window.scrollTo({ top: scrollY, behavior: 'smooth' });
-      setActiveTab(id);
-    }
-  };
+  useEffect(() => {
+    fetch('/data/products.json')
+      .then((res) => res.json())
+      .then((data) => {
+        setProductList(data);
+        const found = data.find((item) => item.id === parseInt(id));
+        setProduct(found);
+      })
+      .catch((err) => {
+        console.error('상품 데이터 로드 실패:', err);
+      });
+  }, [id]);
 
   const formatDate = (date) => {
     const d = new Date(date);
@@ -62,6 +64,17 @@ const ProductDetail = () => {
 
   const handlePlus = () => {
     if (count < product.person) setCount(count + 1);
+  };
+
+  const scrollToSection = (id) => {
+    const section = sectionRefs[id]?.current;
+    if (section) {
+      const headerHeight = 80;
+      const tabHeight = 66;
+      const scrollY = section.getBoundingClientRect().top + window.pageYOffset - headerHeight - tabHeight;
+      window.scrollTo({ top: scrollY, behavior: 'smooth' });
+      setActiveTab(id);
+    }
   };
 
   if (!product) return <p>상품을 찾을 수 없습니다.</p>;
@@ -105,13 +118,15 @@ const ProductDetail = () => {
             </div>
             <div className="notice">
               <strong>클래스 신청 전, 확인해주세요!</strong>
-              <p>제공 키트: 원단, 실, 바늘, 인형 속솜, 삑삑이 부자재 등<br />
-              완성품: 패브릭 장난감 1종 (이름 자수 선택 가능)<br />
-              특징: 완성 후 포장까지 제공 / 반려견용 안전 소재 사용</p>
-
-              <p>실내에서는 음료를 마시거나 시식을 하지 않으며, 공방 테라스<br />
-              에서 시식 및 음료(물포함)를 드실 수 있게 안내해드립니다</p>
-
+              <p>
+                제공 키트: 원단, 실, 바늘, 인형 속솜, 삑삑이 부자재 등<br />
+                완성품: 패브릭 장난감 1종 (이름 자수 선택 가능)<br />
+                특징: 완성 후 포장까지 제공 / 반려견용 안전 소재 사용
+              </p>
+              <p>
+                실내에서는 음료를 마시거나 시식을 하지 않으며, 공방 테라스<br />
+                에서 시식 및 음료(물포함)를 드실 수 있게 안내해드립니다
+              </p>
               <p>**예약시간에 맞춰서 늦지 않게 도착 부탁바랍니다:)</p>
             </div>
             <div className="tags">
@@ -134,8 +149,8 @@ const ProductDetail = () => {
           </div>
         </div>
       </section>
-      <div className='detail-body'>
-        {/* ✅ 탭바 (sticky) */}
+
+      <div className="detail-body">
         <div className="tab" ref={tabRef}>
           <nav className="tab-nav">
             <ul>
@@ -147,10 +162,8 @@ const ProductDetail = () => {
           </nav>
         </div>
 
-        {/* ✅ sticky된 tab이 겹치지 않게 높이 보정 */}
         <div style={{ height: '66px' }}></div>
 
-        {/* ✅ 각 섹션 연결 */}
         <Section1 ref={sectionRefs.section1} />
         <Section2 ref={sectionRefs.section2} />
         <Section3 ref={sectionRefs.section3} />
