@@ -6,7 +6,7 @@ import Card from '../components/Card';
 import EmptyWish from '../components/EmptyWish';
 import EmptyWishMobile from '../components/EmptyWishMobile'; //반응형
 import '../assets/css/new.css';
-import '../assets/css/WishListPage.css';
+import '../assets/css/wishListPage.css';
 
 export default function WishList() {
   const { wishList } = useWish();
