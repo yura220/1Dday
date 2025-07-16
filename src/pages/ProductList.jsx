@@ -19,7 +19,7 @@ const ProductList = () => {
   });
 
   useEffect(() => {
-    fetch('/src/data/products.json')
+    fetch('/data/products.json')
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
@@ -111,7 +111,7 @@ const ProductList = () => {
         selectedFilters={filters}
       />
       <p>{filteredProducts.length}개의 클래스</p>
-      
+
       {filteredProducts.length > 0 ? (
         <ul className="product-list-container">
           {filteredProducts.map((product) => (

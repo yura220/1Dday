@@ -11,7 +11,7 @@ export default function New() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   useEffect(() => {
-    fetch('/src/data/products.json')
+    fetch('/data/products.json')
       .then((res) => res.json())
       .then((data) => {
         const sorted = data.sort(

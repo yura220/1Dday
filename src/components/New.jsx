@@ -6,7 +6,7 @@ export default function New() {
   const [newProducts, setNewProducts] = useState([]);
 
   useEffect(() => {
-    fetch('/src/data/products.json')
+    fetch('/data/products.json')
       .then((res) => res.json())
       .then((data) => {
         const sorted = data.sort(

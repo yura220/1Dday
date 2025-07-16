@@ -10,7 +10,7 @@ export default function EmptyWish() {
   const [bestProducts, setBestProducts] = useState([]);
 
   useEffect(() => {
-    fetch('/src/data/products.json')
+    fetch('/data/products.json')
       .then((res) => res.json())
       .then((data) => {
         const sorted = data.sort((a, b) => Number(b.wishCount) - Number(a.wishCount));

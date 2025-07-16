@@ -17,7 +17,7 @@ const SearchResults = () => {
   useEffect(() => {
     setLoading(true); // 데이터 로딩 시작
 
-    fetch('/src/data/products.json')
+    fetch('/data/products.json')
       .then((res) => res.json())
       .then((data) => {
         const filtered = data.filter((product) => {

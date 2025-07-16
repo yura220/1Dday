@@ -16,7 +16,7 @@ const SearchResults = () => {
 
   useEffect(() => {
     setLoading(true);
-    fetch('/src/data/products.json')
+    fetch('/data/products.json')
       .then((res) => res.json())
       .then((data) => {
         const filtered = data.filter((product) => {

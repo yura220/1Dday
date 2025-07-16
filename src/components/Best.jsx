@@ -7,7 +7,7 @@ export default function Best() {
   const [bestProducts, setBestProducts] = useState([]);
 
   useEffect(() => {
-    fetch('/src/data/products.json')
+    fetch('/data/products.json')
       .then((res) => res.json())
       .then((data) => {
         // wishCount 기준 내림차순 정렬 (숫자로 변환 필수)
