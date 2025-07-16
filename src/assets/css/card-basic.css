@@ -1,0 +1,191 @@
+/* \src\assets\css\card-basic.css */
+
+.product-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.product-list-container > li {
+  width: calc((100% - 2rem) / 3);
+  box-sizing: border-box;
+}
+
+.card img {
+  height: 240px;
+  width: 100%; /* 카드의 너비에 맞춤 */
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+/* card-info */
+.relative {
+    position: relative;
+}
+.card-info {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: auto auto auto;
+
+}
+.cate {
+  display: flex;
+  gap: 20px;
+  grid-column: 1;
+  grid-row: 1;
+}
+.rating {
+  display: flex;
+  gap: 20px;;
+  justify-self: end;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.rating .review, .rating .wish {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rating .review {}
+
+.rating .review::before, .rating .wish::before{
+  content: "";
+  display: block;
+  margin-right: 4px;
+  width: 15px;
+  height: 15px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.rating .review::before {
+  background-image: url(/img/star-s.png);
+}
+.rating .wish {}
+
+.rating .wish::before {
+  background-image: url(/img/bookmark-p.png);
+}
+
+.title {
+  grid-column: 1 / span 2;
+  grid-row: 2;
+}
+.price {
+  justify-self: end;
+  grid-column: 2;
+  grid-row: 3;
+}
+.tags {
+  display: flex;
+  gap: 20px;
+  grid-column: 1;
+  grid-row: 3;
+}
+.tag {
+  display: inline-block;
+  padding: 2px 6px;
+  margin-right: 4px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+/* wishBtn */
+.card {
+  position: relative;
+}
+
+.wish-btn {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease !important;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 26.5px;
+  height: 35px;
+  background: none !important;
+  border: none;
+  z-index: 5;
+}
+
+.card-wrap:hover .wish-btn {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.wish-btn img{
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 0 !important;
+}
+
+.wish-btn.wished {
+}
+
+.rating .review::before,.rating .wish::before{
+  content: "";
+  display: block;
+  margin-right: 5px;
+  width: 15px;
+  height: 15px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* .ratingImg */
+
+.review {
+  display: flex;
+}
+
+.wish {
+  display: flex;
+}
+
+/* 모바일 */
+@media (max-width:375px) {
+  .wish-btn {
+  width: 19px;
+  height: 25px;
+  opacity: 1;
+}
+
+.review, .wish{
+  align-items: center;
+}
+.rating .review::before,.rating .wish::before{
+  margin-right: 5px;
+}
+
+.rating .review::before {
+  width: 12px;
+  height: 12px;
+  background-image: url(/img/star-s.png);
+}
+
+.rating .wish::before {
+  width: 12px;
+  height: 12px;
+  background-image: url(/img/bookmark-p.png);
+}
+
+}
+
+/* 반응형: 화면이 768px 이하일 때 가로 2개 */
+@media (max-width: 768px) {
+  .product-list-container > li {
+    width: calc(50% - 0.5rem); /* gap 1rem 고려 */
+  }
+}

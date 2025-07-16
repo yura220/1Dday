@@ -1,0 +1,211 @@
+#wishList {
+    padding: 100px 0;
+    height: auto;    
+}
+/* 카드 반응형 */
+@media (max-width: 768px) {
+  #wishList .product-list-container {
+    padding-top: 20px;
+  }
+  #wishList .product-list-container > li {
+    width: calc(50% - 0.5rem); /* 2열 */
+  }
+  #wishList .card img {
+    height: 180px; /* 더 작게 */
+  }
+
+  #wishList .card-info {
+    gap: 10px;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: auto auto auto;
+    padding: 10px 0 0 0;
+    font-size: 14px;
+  }
+
+  #wishList .title h3 {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  #wishList .cate {
+    min-width: 180px;
+    gap: 10px;
+  }
+  #wishList .cate p {
+    height: fit-content;
+    padding: 0 10px;
+    border-radius: 15px;    
+    font-size: 11px;
+  }
+  #wishList .cateP {
+    background-color: #f0f0f0;
+
+  }
+  #wishList .dayP {
+    background-color: #ebfeff;
+  }
+  #wishList .price p {
+    font-size: 13px;
+  }
+
+  #wishList .tag {
+    display: none;
+  }
+  #wishList .rating {
+    gap: 10px;
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  #wishList .rating .review::before,
+  #wishList .rating .wish::before {
+    width: 14px;
+    height: 14px;
+  }
+
+  #wishList .wish-btn {
+    opacity: 1 !important;
+    pointer-events: auto;
+    width: 22px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 375px) {
+  #wishList .product-list-container > li {
+    width: 100%; /* 1열 */
+  }
+
+  #wishList .card img {
+    height: 160px;
+  }
+
+  #wishList .title h3 {
+    font-size: 13px;
+  }
+
+  #wishList .cate {
+    gap: 6px;
+  }
+
+  #wishList .cate p {
+    font-size: 10px;
+    padding: 2px 6px;
+  }
+
+  #wishList .rating {
+    gap: 10px;
+    font-size: 11px;
+  }
+
+  #wishList .price p {
+    font-size: 12px;
+  }
+
+  #wishList .tags {
+    display: none;
+  }
+
+  #wishList .wish-btn {
+    width: 19px;
+    height: 25px;
+    top: 12px;
+    right: 12px;
+  }
+}
+
+/* empty */
+#wishList .emptyWish {
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+#wishList .logoImg {
+    display: flex;
+}
+#wishList .logoImg::before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-image: url("/img/logo-icon.png");
+    transform: rotate(90deg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#wishList .emptyWish .btn {
+    background-color: #ff6f61;
+    border-radius: 4px;
+    color: #fff !important;
+    padding: 10px 100px;
+}
+    /* best3 */
+    #wishList .wishBest {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #f2f2f2;
+        padding: 20px 30px;
+        box-sizing: border-box;
+        margin-top: 50px;
+    }
+    #wishList .wishBest h3 {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+    #wishList .wishBest .best3 {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    #wishList .wish-card-img {
+        width: 450px;
+        height: 250px;
+        margin-bottom: 10px;
+    }
+    #wishList .wish-card-img img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+    #wishList .wish-card-info {
+        display: flex;
+        justify-content: space-between;
+    }
+    #wishList .wish-card-meta {
+        display: flex;
+    }
+
+    @media screen and (max-width: 768px) {
+    #wishList li {
+        list-style: none;  /* 불릿 제거 */
+        margin: 0;          /* 브라우저 기본 마진 제거 */
+        padding: 0;         /* 브라우저 기본 패딩 제거 */ 
+    }
+    #wishList .wishBest .best3 {
+        display: block !important;
+    }
+    #wishList .slick-dots li button {
+        background-color: transparent !important;
+    }
+    #wishList .wish-card-img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 3;
+    }
+
+    #wishList .wish-card-title {
+        font-size: 14px;
+    }
+
+    #wishList .wish-card-meta {
+        font-size: 12px;
+    }
+
+    #wishList .wishBest {
+        padding: 10px 20px;
+    }
+    }

@@ -1,0 +1,135 @@
+#review {
+  background-image: url(/img/banner.jpg);
+  height: 400px;
+  min-height: 400px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#review .wrap {
+  height: 100%;
+  position: relative;
+}
+
+#review .wrap h2 {
+  text-align: left;
+  font-size: 36px;
+  font-weight: 700;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+}
+
+#review .wrap .review-list {
+  height: 100%;
+}
+
+#review .wrap .review-list li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#review .slick-list {
+  height: 100% !important;
+}
+
+#review .slick-track {
+  height: 100% !important;
+}
+
+#review .wrap .review-list li h3 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+#review .wrap .review-list li p {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 30px 0;
+}
+
+#review .wrap .review-list li span {
+  font-size: 14px;
+  font-weight: 400;
+  height: fit-content;
+  margin-bottom: 80px;
+}
+
+#review .slick-slide img{
+  width: 746px;
+  height: 100%;
+}
+
+#review .slick-dots {
+  display: flex;
+  justify-content: center;
+  bottom: 10px;
+  gap: 16px;
+  padding: 20px 0;
+  list-style: none;
+}
+
+#review .slick-dots li button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1.5px solid #EAD7CD !important;
+  background-color: transparent;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#review .slick-dots li button::before {
+  color: transparent;
+}
+
+#review .slick-dots li.slick-active button {
+  background-color: #f67560 !important;
+  border-color: #f67560 !important;
+}
+
+#review .slick-dots li.slick-active button::before {
+  color: transparent;
+}
+@media (max-width: 768px){
+
+#review {
+  height: 345px;
+  min-height: 345px;
+  background-image: url(/img/m-banner.jpg);
+}
+
+#review .wrap {
+  width: 100%;
+}
+
+#review .wrap h2 {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: left;
+  padding-left: 15px;
+}
+
+#review .wrap .review-list {
+  margin-bottom: 0;
+}
+
+#review .slick-slide img{
+  width: 375px;
+  height: 297px;
+  transform: translateY(10px);
+}
+
+#review .slick-dots {
+  gap: 0px;
+  transform: translateY(10px);
+}
+
+}

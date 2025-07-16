@@ -1,0 +1,248 @@
+#footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 170px;
+  background-color: #C0C0C0;
+}
+
+#footer .wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 100%;
+}
+
+#footer .wrap .footer-logo {
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#footer .wrap .footer-logo div {
+  width: fit-content;
+  height: fit-content;
+}
+
+#footer .wrap .footer-logo div img {
+  width: 159px;
+  margin-bottom: 15px;
+}
+
+#footer .wrap .footer-logo div p {
+  color: #3b3b3b;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+#footer .wrap .footer-info {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid #929292;
+  border-right: 1px solid #929292;
+}
+
+#footer .wrap .footer-info ul {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+#footer .wrap .footer-info ul li {
+  width: 40px;
+  height: 40px;
+}
+
+#footer .wrap .footer-info ul li a {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  font-size: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#footer .wrap .footer-info ul li:nth-of-type(1) a {
+  background-image: url(../img/svg/github.svg);
+}
+
+#footer .wrap .footer-info ul li:nth-of-type(2) a {
+  background-image: url(../img/svg/notion.svg);
+}
+
+#footer .wrap .footer-info ul li:nth-of-type(3) a {
+  background-image: url(../img/svg/figma.svg);
+}
+
+#footer .wrap .footer-info .m-br{
+  display: none;
+}
+
+#footer .wrap .footer-info .copy{
+  font-size: 10px;
+  display: flex;
+  gap: 3px;
+}
+
+#footer .wrap .footer-info p {
+  color: #3b3b3b;
+  font-size: 13px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 5px;
+  line-height: 1.5;
+  font-size: 13px;
+}
+
+#footer .wrap .footer-info .copy a{
+  color: inherit !important;
+  text-decoration: underline;
+}
+
+#footer .wrap .footer-faq {
+  grid-column: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer .wrap .footer-faq div {
+  width: fit-content;
+  height: fit-content;
+}
+
+#footer .wrap .footer-faq div h3 {
+  color: #3b3b3b;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: left;
+}
+
+#footer .wrap .footer-faq div a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 230px;
+  height: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  color: #fff !important;
+  background-color: #565656;
+  margin: 5px 0;
+}
+
+#footer .wrap .footer-faq div p {
+  color: #3b3b3b;
+  font-size: 11px;
+  font-weight: 400;
+  text-align: left;
+}
+
+@media (max-width: 758px) {
+  #footer {
+    height: 336px;
+}
+
+#footer .wrap {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer .wrap .footer-logo {
+  order: 1;
+  padding-bottom: 15px;
+}
+
+#footer .wrap .footer-logo div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#footer .wrap .footer-logo div img {
+  width: 125px;
+  margin-bottom: 15px;
+}
+
+#footer .wrap .footer-logo div p {
+  font-size: 12px;
+}
+
+#footer .wrap .footer-info {
+  border: 0;
+  order: 3;
+  padding-top: 15px;
+}
+
+#footer .wrap .footer-info ul {
+  gap: 15px;
+}
+
+#footer .wrap .footer-info ul li {
+  height: 30px;
+  width: 30px;
+}
+
+#footer .wrap .footer-info ul li a {
+}
+
+#footer .wrap .footer-info ul li:nth-of-type(1) a {
+}
+
+#footer .wrap .footer-info ul li:nth-of-type(2) a {
+}
+
+#footer .wrap .footer-info ul li:nth-of-type(3) a {
+}
+
+#footer .wrap .footer-info p {
+  font-size: 12px;
+  margin: 0;
+}
+
+#footer .wrap .footer-info .copy{
+  font-size: 10px;
+  gap: 3px;
+}
+
+#footer .wrap .footer-info .m-br{
+  display: inline-block;
+}
+
+#footer .wrap .footer-faq {
+  order: 2;
+  border-top: 1px solid #929292;
+  border-bottom: 1px solid #929292;
+  width: fit-content;
+  padding: 15px 0;
+}
+
+#footer .wrap .footer-faq div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer .wrap .footer-faq div h3 {
+}
+
+#footer .wrap .footer-faq div a {
+}
+
+#footer .wrap .footer-faq div p {
+}
+
+}

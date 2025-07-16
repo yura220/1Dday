@@ -1,0 +1,270 @@
+@media (max-width: 768px) {
+  #bestMobile {
+    margin-top: 30px;
+    height: 750px;
+  }
+
+  #bestMobile .box {
+  }
+
+  #bestMobile .box h2 {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-left: 15px;
+  }
+
+  /* react-slick 슬라이드 감싸는 부분 */
+  #bestMobile .best-list .slick-slide > div {
+    padding: 0 5px;
+    box-sizing: border-box;
+  }
+
+  #bestMobile .slide-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+#bestMobile .slide-group li{
+  margin-bottom: 10px;
+}
+
+#bestMobile .slide-group article{
+  width: 100%;
+  height: 120px;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1));
+  background-color: white;
+}
+
+  #bestMobile .slick-list {
+  padding: 0 15px;
+}
+
+#bestMobile .slick-slide{
+  width: 344px !important;
+    margin-right: 16px;
+}
+
+#bestMobile .card-group{
+  width: 344px;
+}
+
+#bestMobile .best-list .slick-slide > div {
+  padding: 0 !important;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center; /* 카드 가운데 정렬 */
+}
+
+
+  /* 각 카드 스타일 (CardBest 컴포넌트의 루트 클래스명 사용) */
+  #bestMobile .card-best {
+    width: 344px;
+  height: 144px;
+  box-sizing: border-box;
+  margin: 0;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+
+  #bestMobile .best-info .imgbox {
+    width: 83px;
+    height: 120px;
+    display: inline-block;
+    overflow: hidden;
+  }
+
+  #bestMobile .best-info img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  #bestMobile .best-book{}
+
+#bestMobile .num{
+  position: absolute;
+  font-size: 40px;
+  left: 90px;
+  transform: translateY(-20px);
+  font-family: "Pacifico", cursive;
+}
+
+#bestMobile .wish-btn{
+  position: absolute;
+  top: 10px;
+  left: 55px;
+  z-index: 800;
+  pointer-events: auto;
+}
+
+#bestMobile .wish-btn img{
+  object-fit: contain;
+}
+
+#bestMobile .card {
+  padding: 10px;
+  height: 120px;
+  width: 256px;
+  box-sizing: border-box;
+}
+
+#bestMobile .card .info-top{
+  display: flex;
+  margin-bottom: 6px;
+  justify-content: space-between;
+}
+
+#bestMobile .card .tags {
+  font-size: 12px;
+  height: 20px;
+  gap: 7px;
+  padding-left: 30px;
+}
+
+#bestMobile .slick-slide:nth-child(2){
+  margin-right: 0;
+}
+
+#bestMobile .slick-slide:nth-child(2) .slide-group{
+  padding-left: 25px;
+}
+
+#bestMobile .slick-slide:nth-child(2) .card-group li:nth-child(5) .tags{
+  padding-left: 40px;
+}
+
+#bestMobile .card .category{
+  background-color: #F0F0F0;
+  padding: 0 10px;
+  border-radius: 30px;
+  line-height: 1;
+  align-items: center;
+}
+
+#bestMobile .card .day{
+  background-color: #FFEFEA;
+  padding: 0 10px;
+  border-radius: 30px;
+  line-height: 1;
+  align-items: center;
+}
+
+#bestMobile .card .best-rating{display: flex;}
+
+  #bestMobile .card h3 {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  #bestMobile .card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 6px;
+    font-size: 12px;
+    justify-content: start;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  #bestMobile .basic-price,
+  #bestMobile .discount,
+  #bestMobile .price,
+  #bestMobile .p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+#bestMobile .card .basic-price{
+  font-size: 13px;
+  text-decoration-line: line-through;
+  font-weight: 400;
+  color: #ACACAC;
+}
+
+#bestMobile .card .discount{
+  font-size: 13px;
+}
+
+  #bestMobile .card .price {
+    font-size: 15px;
+    font-weight: 700;
+    color: #E26A2C;
+    justify-content: end;
+    gap: 8px;
+  }
+
+  #bestMobile .card .price .p{
+    font-size: 15px;
+    color: #000;
+  }
+
+  /* .ratingImg */
+#bestMobile .best-rating .review {
+  display: flex;
+  font-size: 12px;
+  margin-right: 5px;
+}
+#bestMobile .best-rating .review::before {
+  display: block;
+  width: 12px;
+  height: 12px;
+  padding-right: 8px;
+}
+#bestMobile .best-rating .wish {
+  display: flex;
+  font-size: 12px;
+}
+#bestMobile .best-rating .wish::before {
+  width: 12px;
+  height: 12px;
+  padding-right: 8px;
+}
+
+/* 슬릭 도트 */
+
+#bestMobile .slick-dots li.slick-active button::before{
+  width: 10px;
+  height: 10px;
+  background-color: #f67560 !important;
+  border-color: #f67560 !important;
+  font-family: 'slick';
+  font-size: 0;
+  line-height: 10px;
+  content: '•';
+  text-align: center;
+  opacity: 1;
+  display: block;
+}
+#bestMobile .slick-dots{
+
+}
+#bestMobile .slick-dots li button::before{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1.5px solid #EAD7CD !important;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    font-family: 'slick';
+    font-size: 0;
+    line-height: 10px;
+    content: '•';
+    text-align: center;
+    opacity: 1;
+    display: block;
+}
+
+}
+

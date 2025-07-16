@@ -1,0 +1,400 @@
+#detailTitle {
+    display: block;
+    overflow: visible !important;
+}
+#detailTitle .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+}
+#detailTitle .wrap {
+    display: flex;
+  row-gap: 10px;
+  flex-direction: column;
+  align-items: first baseline;
+}
+#detailTitle .img {
+  overflow: hidden;
+  max-height: 700px;
+  border-radius: 20px;
+  margin-top: 80px;
+  width: 900px;
+}
+#detailTitle .info {
+    grid-column: 1;
+    grid-row: 2;
+}
+#detailTitle .info ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  gap: 100px;
+  background-color: #ffefea;
+  border-radius: 20px;
+  width: 900px;
+}
+#detailTitle .info ul li {
+    display: flex;
+  gap: 10px;
+  background-position: center;
+  justify-content: center;
+  align-items: center;
+}
+#detailTitle .info ul li::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+#detailTitle .info ul li:nth-child(1)::before {
+    background-image: url(../img/svg/list-solid.svg);
+}
+#detailTitle .info ul li:nth-child(2)::before {
+    background-image: url(../img/svg/clock-regular.svg);
+}
+#detailTitle .info ul li:nth-child(3)::before {
+    background-image: url(../img/svg/chart-simple-solid.svg);
+}
+#detailTitle .info ul li:nth-child(4)::before {
+    background-image: url(../img/svg/people.svg);
+}
+
+/* 예약하기 */
+#detailTitle .reservation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 35px;
+  border: 1px solid #ff6f61;
+  position: fixed;
+  right: 12%;
+  width: 520px;
+  height: 784px;
+  min-height: 760px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  top: 80px;
+  z-index: 900;
+  background-color: white;
+}
+#detailTitle .reservation h2 {
+    font-size: 26px;
+  font-weight: 700;
+}
+/* product-info */
+#detailTitle .reservation .product-info {
+    display: grid;
+  grid-template-columns: auto auto 1fr;
+  gap: 10px;
+}
+.review, .wish, .place {
+  display: flex;
+  font-size: 14px;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+.review {
+    grid-column: 1;
+}
+.wish {
+    grid-column: 2;
+}
+.place {
+    justify-self: end;
+    grid-column: 3;
+}
+.review::before, .wish::before, .place::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.review::before {
+  background-image: url(/img/star-s.png);
+}
+.wish::before {
+  background-image: url(/img/bookmark-p.png);
+}
+.place::before {
+  background-image: url(/img/location.png);
+}
+#detailTitle .reservation .date {
+
+}
+
+#detailTitle .reservation .date > button::before{
+    content: '';
+  background-image: url(/img/calendar.png);
+  display: block;
+  width: 22px;
+  height: 25px;
+  background-size: contain;
+  background-position: center;
+  align-self: center;
+}
+
+#detailTitle .reservation .date > button{
+    width: 100%;
+  height: 62px;
+  border: 1px solid #D4D4D4 !important;
+  border-radius: 8px;
+  display: grid;
+  padding: 0 20px !important;
+  grid-template-columns: 25px 1fr 17px;
+}
+
+#detailTitle .reservation .date > button > span{
+    display: flex;
+  align-items: center;
+  padding: 0 20px;
+  font-size: 20px;
+  color: #4D4D4D;
+  font-weight: 600;
+}
+
+#detailTitle .reservation .date > button::after{
+    content: '';
+  background-image: url(/img/down.png);
+  display: block;
+  width: 17px;
+  height: 10px;
+  background-size: contain;
+  background-position: center;
+  align-self: center;
+}
+/* 신청 전, 확인사항 */
+/* 이 부분 css는 나중에 내용물 들어오면 그때 다시 수정할 예정, 지금은 임시 박스 */
+#detailTitle .reservation .notice {
+  padding: 20px 20px 20px 20px;
+  background-color: #F8F8F8;
+  border-radius: 8px;
+  min-height: 200px;
+}
+
+#detailTitle .notice strong{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding-bottom: 10px;
+}
+
+#detailTitle .notice strong::before{
+  content: '';
+  background-image: url(/img/exclamation-mark.png);
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-size: contain;
+}
+
+#detailTitle .notice p{
+  padding-bottom: 20px;
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+/* 태그 */
+#detailTitle .reservation .tags span{
+    padding: 0 15px !important;
+  border: 1px solid #828282;
+  border-radius: 15px !important;
+  font-size: 14px;
+  height: 26px;
+  align-items: center;
+}
+/* 인원 카운트 */
+#detailTitle .reservation .person {
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+}
+#detailTitle .reservation .person span {
+    align-items: center;
+}
+#detailTitle .reservation .person .personCount {
+    padding: 0 15px !important;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px !important;
+}
+#detailTitle .reservation .price {
+    text-align: end;
+  font-size: 24px;
+  font-weight: 600;
+}
+/* 버튼s */
+#detailTitle .reservation .btns {
+    display: flex;
+  gap: 10px;
+}
+#detailTitle .reservation .btns .wishBtn {
+    width: 62px;
+  height: 62px;
+}
+#detailTitle .reservation .btns .faqBtn {
+    width: 62px;
+  height: 62px;
+}
+#detailTitle .reservation .btns .applyBtn {
+    width: 100%;
+}
+
+#detailTitle .wish-btn {
+    all: unset;
+    width: 62px;
+    height: 62px;
+    border: 1px solid #e3e3e3 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 8px;
+}
+#detailTitle .wish-btn img {
+    width: 17px !important;
+  height: 23px !important;
+}
+#detailTitle .reservation .btns .faqBtn::before {
+    content: "";
+    display: block;
+    width: 62px;
+    height: 62px;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    background-image: url('/img/svg/messge.svg');
+    background-position: center;
+    background-size: 45%;
+    background-repeat: no-repeat;
+}
+#detailTitle .reservation .btns .applyBtn {
+    border-radius: 4px;
+  background-color: #ff6f61 !important;
+  color: #fff;
+  width: 302px;
+}
+
+/* 달력 */
+.react-calendar{
+    width: 448px;
+  position: absolute;
+  font-family: "Noto Sans KR", sans-serif;
+}
+.react-calendar__tile.saturday {
+  color: #1767ff;
+}
+.react-calendar__month-view__days__day--weekend{
+    color: #ff4343;
+}
+
+.react-calendar__navigation button{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.react-calendar__navigation button > span{
+    align-items: center;
+    font-weight: 700;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+.react-calendar__month-view__weekdays__weekday > abbr{
+    font-family: "Noto Sans KR", sans-serif;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.react-calendar button{}
+
+.react-calendar__navigation__arrow,
+.react-calendar__navigation__prev2-button,
+.react-calendar__navigation__label,
+.react-calendar__tile,
+.react-calendar__month-view__days__day,
+.react-calendar__month-view__days__day--neighboringMonth{
+height: 30px !important;
+}
+.react-calendar__navigation__label{}
+
+/* section-bar */
+.detail-body {
+  position: relative;
+  overflow: visible;
+}
+.tab{
+  position: sticky;
+  top: 56px;
+  z-index: 100;
+  background-color: white;
+}
+.tab-nav {
+  display: flex;
+  justify-content: flex-start;
+  height: 56px;
+  align-items: center;
+}
+
+.tab-nav ul {
+  width: 900px;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0;
+  padding-left: calc((100vw - 1440px - 17px) / 2);
+}
+
+.tab-nav li {
+  flex: 1;
+  text-align: center;
+  padding: 1rem 0;
+  cursor: pointer;
+  position: relative;
+  font-weight: 500;
+  color: inherit;
+}
+
+.tab-nav li.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #FF6F61;
+  border-radius: 1px;
+}
+
+.tab-nav li,
+.tab-nav button,
+.tab-nav a {
+  cursor: default;
+}
+.fixed-tab {
+  position: fixed;
+  top: 60px;
+  width: 60%;
+  z-index: 1;
+  transition: all 0.3s ease;
+  background-color: white;
+}
+/* .tab-nav ul {
+    display: flex;
+  gap: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  padding-left: calc((100vw - 1440px - 13px)/ 2);
+}
+.tab-nav li{
+    padding-bottom: 20px;
+} */

@@ -1,0 +1,137 @@
+@media (max-width: 768px){
+#faq-m {}
+
+#faq-m .faq-list-wrap {}
+
+#faq-m .wrap {
+  height: 100%;
+  padding-top: 70px;
+}
+
+#faq-m .wrap .title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+#faq-m .h2{
+  font-size: 24px;
+  font-weight: 700;
+}
+
+#faq-m .faq-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 33.5px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 8px;
+  color: #fff !important;
+  background-color: #E26A2C;
+}
+
+#faq-m .faq-category {
+  display: flex;
+  flex-direction: column; /* 추가: 질문 리스트가 아래로 쌓이게 */
+  align-items: stretch;
+  background-color: #FAFAFA;
+  border-top: 1px solid #D7D7D7;
+  box-sizing: border-box;
+}
+
+#faq-m .faq-category:nth-last-child(1){
+  border-bottom: 1px solid #D7D7D7;
+}
+
+#faq-m .category-title {
+  padding: 13px 5px !important;
+  background-color: transparent !important;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 18px;
+}
+
+#faq-m .category-title.active {}
+
+#faq-m .category-title span {}
+
+#faq-m .faqList-icon {
+  width: 12px;
+  height: 7px;
+  }
+
+
+#faq-m .faqList-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+#faq-m .faq-questions {
+  display: block;
+  position: static; /* 또는 아예 지정 안함 */
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;}
+
+#faq-m .faq-question-item {
+  display: block;
+  width: 100%;
+  position: relative;
+  background-color: white;
+  border-top: 1px solid #D7D7D7;
+}
+
+#faq-m .question-title {
+  font-size: 15px;
+  font-weight: 500;
+  height: 50px;
+  padding: 0 5px !important;
+}
+
+#faq-m .question-title span{
+  height: 12px;
+}
+
+#faq-m .answer {
+  background-color: white;
+  max-height: 200px;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  font-size: 15px;
+  color: #333;
+  line-height: 1.6;
+  padding: 0 5px 10px 5px !important;
+}
+
+.faq-question-item.active .answer {
+  max-height: 1000px;
+  padding: 16px;
+}
+
+.category-title,
+.question-title {
+  width: 100%;
+  padding: 16px;
+  font-weight: bold;
+  border: none;
+  background: #f6f6f6;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faqList-icon img {
+  width: 20px;
+  height: 20px;
+}
+}

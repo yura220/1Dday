@@ -1,0 +1,140 @@
+#title {
+  height: 550px;
+  position: relative;
+  overflow: hidden;
+  background: #000; /* 이미지 로딩 전 대비 */
+  padding-top: 60px;
+  box-sizing: border-box;
+}
+
+#title .box {
+  height: 100%;
+  width: 100%;
+  max-width: 1903px;
+  margin: 0 auto;
+  position: relative;
+}
+
+#title .slick-slide {
+  height: 550px !important;
+}
+
+#title .slick-slide > div {
+  height: 100%;
+  width: 100% !important;
+}
+
+#title .title-slide img {
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+#title .title-slide .slick-slide {
+  position: relative;
+  height: 550px;
+}
+
+
+#title source{
+width: 100%;
+height: 100%;
+}
+
+#title .title-slide picture,
+#title .title-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+#title .title-slide h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 1440px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 48px;
+  color: #fff;
+  line-height: 1.4;
+  z-index: 2;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+#title .slick-dots {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: auto;
+}
+
+#title .slick-dots li {
+  display: none;
+  width: 45px;
+  height: 25px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+#title .slick-dots li.slick-active {
+  display: inline-block;
+}
+
+#title .slick-dots li span.custom-dot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  width: 100%;
+}
+
+.br-m {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #title {
+    height: 600px;
+    box-sizing: content-box;
+    padding-top: 56px;
+  }
+
+  #title .box {
+    height: 600px;
+  }
+
+  #title .slick-slide > div {
+    height: 100% !important;
+  }
+
+  #title .title-slide .slick-slide {
+    height: 600px !important;
+  }
+
+  #title .title-slide .slick-list {
+    height: 600px !important;
+  }
+
+  #title .title-slide .slick-track {
+    height: 600px !important;
+  }
+
+  #title .title-slide h2 {
+    left: 15px;
+    right: 15px;
+    transform: translateY(-50%);
+    font-size: 32px;
+    width: auto;
+  }
+
+  .br-m {
+    display: inline;
+  }
+}

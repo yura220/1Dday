@@ -1,0 +1,75 @@
+#search-mobile {
+  height: 100vh;
+
+}
+
+#search-mobile .search-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#search-mobile .search-btn {
+  right: 15px;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  border: none;
+  background-image: url(../img/svg/search.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-size: 0;
+}
+
+#search-mobile .search-input {
+  border: 0;
+  height: 56px;
+  width: 85%;
+  color: #A7A7A7;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+#search-mobile .search-input:focus{
+  border: 0;
+  outline: 0;
+}
+
+#search-mobile .search-input:focus::placeholder{
+  opacity: 0;
+}
+
+#search-mobile .close-btn {
+  right: 15px;
+  width: 16px;
+  height: 16px;
+  background-color: transparent;
+  border: none;
+  background-image: url(/img/xmark-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-size: 0;
+}
+
+#search-mobile .popular-keywords {}
+
+#search-mobile .title {
+  color: #949494;
+  font-size: 13px;
+  padding: 30px 0 20px 0;
+}
+
+#search-mobile .popular-keywords ul {}
+
+#search-mobile .popular-keywords ul li {
+  display: flex;
+  gap: 15px;
+  padding: 5px 0;
+}
+
+#search-mobile .rank {
+  color: #E26A2C;
+  font-weight: 700;
+}

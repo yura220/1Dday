@@ -1,0 +1,86 @@
+#sign {
+
+}
+
+#sign .wrap {
+  width: 400px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#sign .wrap h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+#sign .wrap form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 15px;
+}
+
+#sign .wrap form input {
+  height: 38px;
+  padding: 5px 20px;
+  color: #000;
+  border: 1px solid #999;
+  border-radius: 8px;
+}
+
+#sign .wrap form button {
+  width: 400px;
+  height: 60px;
+  background-color: #FF6F61 !important;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 8px;
+}
+
+#sign .wrap p {
+  display: flex;
+  margin-top: 30px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+#sign .wrap p a {
+  color: #727272 !important;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px){
+#sign {
+}
+
+#sign .wrap {
+  width: 290px;
+}
+
+#sign .wrap h2 {
+  margin-bottom: 90px;
+}
+
+#sign .wrap form {
+}
+
+#sign .wrap form input {
+}
+
+#sign .wrap form button {
+  width: 290px;
+}
+
+#sign .wrap p {
+}
+
+#sign .wrap p a {
+}
+
+
+}

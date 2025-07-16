@@ -1,0 +1,153 @@
+header {
+  height: 60px;
+  position: fixed;
+  z-index: 999;
+  background-color: white;
+  width: 100%;
+}
+
+header .wrap {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .wrap h1 {
+  color: #000;
+  font-size: 0;
+  width: 160px;
+  height: 25px;
+  background-image: url(../img/svg/logo.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+header .wrap form {
+  width: 675px;
+  height: 50px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+header .wrap form input {
+  width: 100%;
+  border-radius: 25px;
+  padding: 10px 25px;
+  border: 1px solid #ccc;
+  color: #000;
+  font-size: 14px;
+}
+
+header .wrap form input:focus {
+  outline: none;
+}
+
+header .wrap form button {
+  position: absolute;
+  right: 15px;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  border: none;
+  background-image: url(../img/svg/search.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+
+
+header .wrap .gnb {
+  display: flex;
+  gap: 20px;
+}
+
+header .wrap .gnb li {
+  width: 22px;
+  height: 22px;
+}
+
+header .wrap .gnb li a {
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+header .wrap .gnb li:nth-of-type(1) a {
+  background-image: url(/img/bookmark-b.png);
+}
+
+header .wrap .gnb li:nth-of-type(2) a {
+  background-image: url(/img/user.png);
+}
+
+header .wrap .gnb li:nth-of-type(3) a {
+  background-image: url(/img/language.png);
+}
+
+header .wrap .gnb li:nth-of-type(4) a {
+  background-image: url(/img/menu.png);
+}
+
+
+/* 모바일 */
+@media (max-width: 758px) {
+
+header {
+  height: 56px;
+  width: 100%;
+  overflow: hidden;
+}
+
+header .wrap {
+  width: 344px;
+  margin: 0 auto;
+  max-width: 758px;
+}
+
+header .wrap h1 {
+}
+
+header .wrap form {
+}
+
+header .wrap form input {
+    display: none; /* input 숨겨서, 검색버튼만 보이게 설정*/
+    width: 100%;
+    font-size: 14px;
+    padding: 8px 40px 8px 15px;
+    height: 36px;
+    border-radius: 18px;
+    border: 1px solid #ccc;
+}
+
+header .wrap form input:focus {
+}
+
+header .wrap form button {
+}
+
+header .wrap .gnb {
+}
+
+header .wrap .gnb li {
+}
+
+header .wrap .gnb li a {
+}
+
+header .wrap .gnb li:nth-of-type(n+1):nth-of-type(-n+3) {
+  display: none;
+}
+
+header .wrap .gnb li:nth-of-type(5) a {
+}
+
+}

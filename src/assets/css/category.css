@@ -1,0 +1,117 @@
+#category {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  min-height: fit-content;
+  margin: 100px 0;
+}
+#category .wrap {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+
+}
+#category .wrap button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 268px;
+  height: 170px;
+  font-size: 20px;
+  padding: 20px;
+  border-radius: 25px;
+  box-shadow: 0 0 25px -2px rgba(0, 0, 0, 0.2);
+}
+
+#category .wrap button::before {
+  content: '';
+  display: block;
+  width: 120px;
+  height: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.button-text {
+  color: #000;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  padding-top: 15px;
+}
+
+#category .wrap button:nth-of-type(1)::before {
+  background-image: url(../img/svg/pet.svg);
+}
+
+#category .wrap button:nth-of-type(2)::before {
+  background-image: url(../img/svg/beauty.svg);
+}
+
+#category .wrap button:nth-of-type(3)::before {
+  background-image: url(../img/svg/sport.svg);
+}
+
+#category .wrap button:nth-of-type(4)::before {
+  background-image: url(../img/svg/cooking.svg);
+}
+
+#category .wrap button:nth-of-type(5)::before {
+  background-image: url(/img/Category.png);
+}
+@media (max-width:785px) {
+
+#category {
+  margin: 40px 0 80px 0;
+}
+
+#category .wrap {
+  justify-content: space-between;
+  gap: 0;
+  height: 90px;
+}
+
+#category .wrap button {
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 0 15px -2px rgba(0, 0, 0, 0.2);
+}
+
+.button-text {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  color: #000;
+  height: fit-content;
+  width: 64px;
+  display: flex;
+  justify-content: center;
+  padding-top: 0;
+}
+
+#category .wrap button::before {
+  width: 45px;
+  height: 45px;
+}
+
+#category .wrap button:nth-of-type(1)::before {}
+
+#category .wrap button:nth-of-type(2)::before {}
+
+#category .wrap button:nth-of-type(3)::before {}
+
+#category .wrap button:nth-of-type(4)::before {}
+
+#category .wrap button:nth-of-type(5)::before {}
+
+}

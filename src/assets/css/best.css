@@ -1,0 +1,233 @@
+#best {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#best .wrap {
+
+}
+
+#best .wrap h2 {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: left;
+  margin: 20px 0;
+}
+
+#best .wrap .best-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  gap: 20px;
+}
+
+#best .wrap .best-list li {
+  width: 710px;
+  height: 120px;
+}
+#best .wrap .best-list li:nth-of-type(1) {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+#best .wrap .best-list li:nth-of-type(2) {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+#best .wrap .best-list li:nth-of-type(3) {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+#best .wrap .best-list li:nth-of-type(4) {
+  grid-column: 1;
+  grid-row: 4;
+}
+
+#best .wrap .best-list li:nth-of-type(5) {
+  grid-column: 1;
+  grid-row: 5;
+}
+
+/* 6번 ~ 10번: column 2 */
+#best .wrap .best-list li:nth-of-type(6) {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#best .wrap .best-list li:nth-of-type(7) {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+#best .wrap .best-list li:nth-of-type(8) {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+#best .wrap .best-list li:nth-of-type(9) {
+  grid-column: 2;
+  grid-row: 4;
+}
+
+#best .wrap .best-list li:nth-of-type(10) {
+  grid-column: 2;
+  grid-row: 5;
+}
+#best .wrap .best-list li .best-info {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background-color: white;
+  filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.1));
+}
+
+#best .wrap .best-list li .best-info .num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 64px;
+  font-weight: 400;
+  font-family: "Pacifico", cursive;
+  padding: 0 5px 0 15px;
+  line-height: 1;
+  transform: translateY(-5px);
+}
+
+#best .wrap .best-list li .best-info a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding: 10px;
+  width: 100%;
+}
+
+#best .wrap .best-list li .best-info img:not(.wish-btn img) {
+  width: 150px;
+  min-width: 150px;
+  height: 100%;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+
+#best .wrap .best-list li .best-info a .info-top {
+  display: flex;
+  justify-content: space-between;
+  height: 20px;
+  transform: translateY(-10px);
+}
+
+#best .wrap .best-list li .best-info a .info-top .tags {
+  display: flex;
+  height: 100%;
+  gap: 10px;
+}
+
+#best .wrap .best-list li .best-info a .info-top .tags span {
+  padding: 0 10px;
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #F0F0F0;
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+#best .wrap .best-list li .best-info a .info-top .tags span:nth-of-type(2) {
+  border-radius: 20px;
+  background-color: #FFEFEA;
+}
+
+#best .wrap .best-list li .best-info a .info-top .best-rating {
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+}
+
+#best .wrap .best-list li .best-info a .info-top .best-rating span {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#best .wrap .best-list li .best-info a h3 {
+  text-align: left;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+#best .wrap .best-list li .best-info a p {
+  text-align: left;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+#best .wrap .best-list li .best-info a .price {
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  align-items: end;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  gap: 10px;
+}
+
+#best .wrap .best-list li .best-info a .price span {
+  width: fit-content;
+  height: fit-content;
+}
+
+#best .wrap .best-list li .best-info a .price .discount {
+  color: #E26A2C;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+#best .wrap .best-list li .best-info a .price p {
+  width: fit-content;
+  height: fit-content;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+#best .wrap .best-list li .best-info a .price p span {
+  color: #ACACAC;
+  font-size: 13px;
+  font-weight: 400;
+  width: 100%;
+  justify-content: end;
+  text-decoration: line-through;
+}
+
+/* wishBtn */
+
+#best .wish::before{
+  width: 11px !important;
+}
+
+#best .best-info:hover .wish-btn{
+  opacity: 1;
+}
+
+#best .wish-btn {
+  position: absolute;
+  width: 20px;
+  height: 28px;
+  left: 115px;
+  top: 15px;
+  pointer-events: auto;
+}
+/* .rating */
+#best .review::before {
+  width: 15px !important;
+  height: 15px !important;
+  background-image: url(/img/star-s.png);
+}
