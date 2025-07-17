@@ -9,6 +9,12 @@
 .filter-group {
   display: flex;
 }
+
+.filter-group span{
+  margin: 0 10px;
+  color: #868686;
+}
+
 .filter-group h4 {
   display: flex;
   align-items: center;

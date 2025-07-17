@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import FilterPanel from '../components/FilterPanel';
 import Card from '../components/Card';
 import '../assets/css/card-basic.css';
+import '../assets/css/list.css';
 
 const ProductList = () => {
   const { category } = useParams(); // URL에서 카테고리 받아오기
@@ -103,14 +104,14 @@ const ProductList = () => {
   };
 
   return (
-    <div className="wrap">
+    <div id='list' className="wrap">
       {/* <h2>{category || '전체'}</h2> */}
       <FilterPanel
         onApply={handleApply}
         onReset={handleReset}
         selectedFilters={filters}
       />
-      <p>{filteredProducts.length}개의 클래스</p>
+      <p className='Number'>{filteredProducts.length}개의 클래스</p>
 
       {filteredProducts.length > 0 ? (
         <ul className="product-list-container">

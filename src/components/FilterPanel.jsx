@@ -5,7 +5,6 @@ import '../assets/css/FilterPanel.css';
 const categories = ['반려동물', '뷰티', '스포츠', '쿠킹'];
 const days = ['평일', '주말'];
 const levels = ['입문', '중급', '고급'];
-const persons = ['선택안함', '1명', '2명', '3명', '4명', '5명', '6명', '7명', '8명', '9명', '10명이상', '20명이상', '30명이상'];
 const tags = ['선물용', '친구랑', '데이트', '포토존', '키즈가능', '펫동반', '야외클래스', '야간클래스', '1:1'];
 
 const FilterPanel = ({ onApply, onReset, selectedFilters }) => {
@@ -71,7 +70,7 @@ const FilterPanel = ({ onApply, onReset, selectedFilters }) => {
                 ...prev,
                 day: prev.day === day ? '' : day
               }))
-            }          
+            }
           >
             {day}
           </button>
@@ -89,7 +88,7 @@ const FilterPanel = ({ onApply, onReset, selectedFilters }) => {
                 ...prev,
                 level: prev.level === level ? '' : level
               }))
-            }          
+            }
           >
             {level}
           </button>
@@ -107,7 +106,7 @@ const FilterPanel = ({ onApply, onReset, selectedFilters }) => {
                 ...prev,
                 person: prev.person === person ? '' : person
               }))
-            }          
+            }
           >
             {person}
           </button>
@@ -137,7 +136,7 @@ const FilterPanel = ({ onApply, onReset, selectedFilters }) => {
           placeholder="최소금액"
           min={0}
         />
-        {' ~ '}
+        <span>{' ~ '}</span>
         <input
           type="number"
           name="max"
